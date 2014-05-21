@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photobox", "Photobox\Photobox.csproj", "{376A223C-1633-44AF-BBBA-CF6F40E2D911}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photobox", "Photobox\Photobox.csproj", "{B3411E80-6F70-4274-AC18-ACDCC37BB527}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,24 +15,24 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Debug|ARM.ActiveCfg = Debug|ARM
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Debug|ARM.Build.0 = Debug|ARM
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Debug|ARM.Deploy.0 = Debug|ARM
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Debug|x86.ActiveCfg = Debug|x86
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Debug|x86.Build.0 = Debug|x86
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Debug|x86.Deploy.0 = Debug|x86
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Release|Any CPU.Build.0 = Release|Any CPU
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Release|ARM.ActiveCfg = Release|ARM
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Release|ARM.Build.0 = Release|ARM
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Release|ARM.Deploy.0 = Release|ARM
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Release|x86.ActiveCfg = Release|x86
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Release|x86.Build.0 = Release|x86
-		{376A223C-1633-44AF-BBBA-CF6F40E2D911}.Release|x86.Deploy.0 = Release|x86
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Debug|ARM.ActiveCfg = Debug|ARM
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Debug|ARM.Build.0 = Debug|ARM
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Debug|ARM.Deploy.0 = Debug|ARM
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Debug|x86.ActiveCfg = Debug|x86
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Debug|x86.Build.0 = Debug|x86
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Debug|x86.Deploy.0 = Debug|x86
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Release|ARM.ActiveCfg = Release|ARM
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Release|ARM.Build.0 = Release|ARM
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Release|ARM.Deploy.0 = Release|ARM
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Release|x86.ActiveCfg = Release|x86
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Release|x86.Build.0 = Release|x86
+		{B3411E80-6F70-4274-AC18-ACDCC37BB527}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

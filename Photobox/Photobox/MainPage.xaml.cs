@@ -7,9 +7,9 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using Photobox.Resources;
+using PhotoBox.Resources;
 
-namespace Photobox
+namespace PhotoBox
 {
     public partial class MainPage : PhoneApplicationPage
     {
@@ -18,27 +18,20 @@ namespace Photobox
         {
             InitializeComponent();
 
-            // Set the data context of the listbox control to the sample data
-            DataContext = App.ViewModel;
-
             // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
-        }
-
-        // Load data for the ViewModel Items
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            if (!App.ViewModel.IsDataLoaded)
-            {
-                App.ViewModel.LoadData();
-            }
+            BuildLocalizedApplicationBar();
         }
 
         // Sample code for building a localized ApplicationBar
-        //private void BuildLocalizedApplicationBar()
-        //{
+        private void BuildLocalizedApplicationBar()
+        {
         //    // Set the page's ApplicationBar to a new instance of ApplicationBar.
-        //    ApplicationBar = new ApplicationBar();
+            ApplicationBar = new ApplicationBar();
+
+            ApplicationBarIconButton appBarButtonNew = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.new.png", UriKind.Relative));
+            appBarButtonNew.Text = "Adicionar";
+            appBarButtonNew.Click += this.ClickNewAlbumButton;
+            ApplicationBar.Buttons.Add(appBarButtonNew);
 
         //    // Create a new button and set the text value to the localized string from AppResources.
         //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
@@ -48,6 +41,11 @@ namespace Photobox
         //    // Create a new menu item with the localized string from AppResources.
         //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
         //    ApplicationBar.MenuItems.Add(appBarMenuItem);
-        //}
+        }
+
+        private void ClickNewAlbumButton(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Src/AddAlbum.xaml", UriKind.Relative));
+        }
     }
 }

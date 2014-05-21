@@ -6,11 +6,11 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Photobox")]
+[assembly: AssemblyTitle("PhotoBox")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Photobox")]
+[assembly: AssemblyProduct("PhotoBox")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -21,7 +21,7 @@ using System.Resources;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1750295a-ad9e-4619-87f8-6d5dc2cc8f85")]
+[assembly: Guid("b2db70b0-2cff-4aaf-8962-bc3edd2ede4b")]
 
 // Version information for an assembly consists of the following four values:
 //

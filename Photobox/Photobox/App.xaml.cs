@@ -6,31 +6,12 @@ using System.Windows.Markup;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using Photobox.Resources;
-using Photobox.ViewModels;
+using PhotoBox.Resources;
 
-namespace Photobox
+namespace PhotoBox
 {
     public partial class App : Application
     {
-        private static MainViewModel viewModel = null;
-
-        /// <summary>
-        /// A static ViewModel used by the views to bind against.
-        /// </summary>
-        /// <returns>The MainViewModel object.</returns>
-        public static MainViewModel ViewModel
-        {
-            get
-            {
-                // Delay creation of the view model until necessary
-                if (viewModel == null)
-                    viewModel = new MainViewModel();
-
-                return viewModel;
-            }
-        }
-
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>
@@ -57,7 +38,7 @@ namespace Photobox
             // Show graphics profiling information while debugging.
             if (Debugger.IsAttached)
             {
-                // Display the current frame rate counters
+                // Display the current frame rate counters.
                 Application.Current.Host.Settings.EnableFrameRateCounter = true;
 
                 // Show the areas of the app that are being redrawn in each frame.
@@ -73,12 +54,7 @@ namespace Photobox
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
-        }
 
-        // Code to execute when a contract activation such as a file open or save picker returns 
-        // with the picked file or other return values
-        private void Application_ContractActivated(object sender, Windows.ApplicationModel.Activation.IActivatedEventArgs e)
-        {
         }
 
         // Code to execute when the application is launching (eg, from Start)
@@ -91,11 +67,6 @@ namespace Photobox
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
-            // Ensure that application state is restored appropriately
-            if (!App.ViewModel.IsDataLoaded)
-            {
-                App.ViewModel.LoadData();
-            }
         }
 
         // Code to execute when the application is deactivated (sent to background)
@@ -108,7 +79,6 @@ namespace Photobox
         // This code will not execute when the application is deactivated
         private void Application_Closing(object sender, ClosingEventArgs e)
         {
-            // Ensure that required application state is persisted here.
         }
 
         // Code to execute if a navigation fails
@@ -152,9 +122,6 @@ namespace Photobox
 
             // Handle reset requests for clearing the backstack
             RootFrame.Navigated += CheckForResetNavigation;
-
-            // Handle contract activation such as a file open or save picker
-            PhoneApplicationService.Current.ContractActivated += Application_ContractActivated;
 
             // Ensure we don't initialize again
             phoneApplicationInitialized = true;

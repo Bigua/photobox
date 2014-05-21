@@ -1,6 +1,6 @@
-﻿using Photobox.Resources;
+﻿using PhotoBox.Resources;
 
-namespace Photobox
+namespace PhotoBox
 {
     /// <summary>
     /// Provides access to string resources.

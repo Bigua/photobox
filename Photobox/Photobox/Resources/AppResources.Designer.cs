@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Photobox.Resources
+namespace PhotoBox.Resources
 {
     using System;
 
@@ -45,7 +45,7 @@ namespace Photobox.Resources
             {
                 if (object.ReferenceEquals(resourceMan, null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Photobox.Resources.AppResources", typeof(AppResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PhotoBox.Resources.AppResources", typeof(AppResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -103,18 +103,7 @@ namespace Photobox.Resources
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to Sample Runtime Property Value.
-        /// </summary>
-        public static string SampleProperty
-        {
-            get
-            {
-                return ResourceManager.GetString("SampleProperty", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to button text.
+        ///   Looks up a localized string similar to button.
         /// </summary>
         public static string AppBarButtonText
         {
