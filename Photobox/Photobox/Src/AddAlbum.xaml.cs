@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Xna.Framework.Media;
+using System.Windows.Media.Imaging;
 
 namespace PhotoBox.Src
 {
@@ -23,7 +24,13 @@ namespace PhotoBox.Src
         {
             MediaLibrary mediaLibrary = new MediaLibrary();
             PictureCollection pictureCollection = mediaLibrary.Pictures;
-            listBox.ItemsSource = pictureCollection.ToList();
+
+            for (int i = 0; i < pictureCollection.Count; ++i)
+            {
+                BitmapImage bitImg = new BitmapImage();
+                bitImg.SetSource(pictureCollection.ElementAt(i).GetImage());
+                listBox.Items.Add(bitImg);
+            }
         }
     }
 }
