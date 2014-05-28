@@ -41,8 +41,10 @@
                     <TextBlock.Margin>10,0,0,0</TextBlock.Margin>
                 </TextBlock>
                 <TextBox Grid.Row="1"/>
-                <ListBox Grid.Row="2" x:Name="listBox">
-                    <ListBox.Margin>8,0,0,0</ListBox.Margin>
+                <ListBox Grid.Row="2" x:Name="listBox" Grid.RowSpan="2">
+                    <ListBox.Margin>
+                        <Thickness>8,0,0,0</Thickness>
+                    </ListBox.Margin>
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <toolkit:WrapPanel ItemHeight="218" ItemWidth="218"/>
@@ -50,15 +52,19 @@
                     </ListBox.ItemsPanel>
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel>
-                                <StackPanel.Orientation>Horizontal</StackPanel.Orientation>
-                                <StackPanel.Margin>5,0,0,5</StackPanel.Margin>
+                            <StackPanel Tap="OnTapImage">
+                                <StackPanel.Orientation>
+                                    <Orientation>Horizontal</Orientation>
+                                </StackPanel.Orientation>
+                                <StackPanel.Margin>
+                                    <Thickness>5,0,0,5</Thickness>
+                                </StackPanel.Margin>
                                 <Image Source="{Binding}"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Grid Grid.Row="3">
+                <!--<Grid Grid.Row="3">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
                     </Grid.ColumnDefinitions>
@@ -67,7 +73,7 @@
                     <Button Grid.Column="0">
                         <Button.Content> Salvar </Button.Content>
                     </Button>
-                </Grid>
+                </Grid>-->
             </Grid>
         </Grid>
     </Grid>
