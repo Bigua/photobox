@@ -56,14 +56,29 @@ namespace PhotoBox.Src
         private void OnTapImage(object sender, System.Windows.Input.GestureEventArgs e)
         {
             StackPanel panel = (StackPanel)sender;
-            Image iconCheck = new Image();
-            iconCheck.Source = new BitmapImage(new Uri("/Assets/Icon/icon.check.png", UriKind.Relative));
             Image background = (Image)panel.Children.ElementAt(0);
+            string checkPath = "/Assets/Icon/icon.check.png";
+            Image iconCheck = new Image();
+            iconCheck.Source = new BitmapImage(new Uri(checkPath, UriKind.Relative));
             ImageBrush brush = new ImageBrush();
-            brush.ImageSource = background.Source;
-            panel.Background = brush;
-            panel.Children.Clear();
-            panel.Children.Add(iconCheck);
+
+            if (((BitmapImage)background.Source).UriSource.ToString() == checkPath)
+            {
+                brush = (ImageBrush)panel.Background;
+                Image img = new Image();
+                img.Source = brush.ImageSource;
+                img.Stretch = Stretch.Fill;
+                img.Height = 213;
+                img.Width = 213;
+                panel.Children.Clear();
+                panel.Children.Add(img);
+            } else {
+                brush.ImageSource = background.Source;
+                panel.Background = brush;
+                panel.Children.Clear();
+                panel.Children.Add(iconCheck);
+            }
+
             panel.UpdateLayout();
         }
     }

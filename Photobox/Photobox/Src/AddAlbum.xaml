@@ -59,21 +59,15 @@
                                 <StackPanel.Margin>
                                     <Thickness>5,0,0,5</Thickness>
                                 </StackPanel.Margin>
-                                <Image Source="{Binding}"/>
+                                <Image Source="{Binding}">
+                                    <Image.Stretch>Fill</Image.Stretch>
+                                    <Image.Height>213</Image.Height>
+                                    <Image.Width>213</Image.Width>
+                                </Image>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <!--<Grid Grid.Row="3">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.HorizontalAlignment>Center</Grid.HorizontalAlignment>
-                    <Grid.VerticalAlignment>Center</Grid.VerticalAlignment>
-                    <Button Grid.Column="0">
-                        <Button.Content> Salvar </Button.Content>
-                    </Button>
-                </Grid>-->
             </Grid>
         </Grid>
     </Grid>
