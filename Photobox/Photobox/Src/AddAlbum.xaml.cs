@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Navigation;
-using Microsoft.Phone.Controls;
+﻿using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Xna.Framework.Media;
-using System.Windows.Media.Imaging;
+using System;
 using System.Diagnostics;
+using System.Linq;
+using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace PhotoBox.Src
 {
@@ -19,16 +15,13 @@ namespace PhotoBox.Src
         public AddAlbum()
         {
             InitializeComponent();
-
             BuildLocalizedApplicationBar();
-
             this.loadPictures();
         }
 
         private void BuildLocalizedApplicationBar()
         {
             ApplicationBar = new ApplicationBar();
-
             ApplicationBarIconButton appBarButtonSave = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.save.png", UriKind.Relative));
             appBarButtonSave.Text = "Salvar";
             appBarButtonSave.Click += this.ClickSaveAlbumButton;
@@ -62,6 +55,7 @@ namespace PhotoBox.Src
             iconCheck.Source = new BitmapImage(new Uri(checkPath, UriKind.Relative));
             ImageBrush brush = new ImageBrush();
 
+            //uncheck
             if (((BitmapImage)background.Source).UriSource.ToString() == checkPath)
             {
                 brush = (ImageBrush)panel.Background;
@@ -72,13 +66,15 @@ namespace PhotoBox.Src
                 img.Width = 213;
                 panel.Children.Clear();
                 panel.Children.Add(img);
-            } else {
+            }
+            //check
+            else
+            {
                 brush.ImageSource = background.Source;
                 panel.Background = brush;
                 panel.Children.Clear();
                 panel.Children.Add(iconCheck);
             }
-
             panel.UpdateLayout();
         }
     }
