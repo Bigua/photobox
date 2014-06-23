@@ -1,92 +1,95 @@
 ﻿<phone:PhoneApplicationPage
-    x:Class="PhotoBox.MainPage"
+    x:Class="Photobox.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
-    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"    
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:ViewModels="clr-namespace:PhotoBox.ViewModels"   
-    mc:Ignorable="d"    
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    SupportedOrientations="Portrait"  Orientation="Portrait"
+    SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <phone:PhoneApplicationPage.Resources>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar>
+            <shell:ApplicationBarIconButton Click="OnTapShareButtonIcon">
+                <shell:ApplicationBarIconButton.IconUri>/Toolkit.Content/ApplicationBar.Share.png</shell:ApplicationBarIconButton.IconUri>
+                <shell:ApplicationBarIconButton.Text>Compartilhar</shell:ApplicationBarIconButton.Text>
+            </shell:ApplicationBarIconButton>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-        <phone:JumpListItemBackgroundConverter x:Key="BackgroundConverter"/>
-        <phone:JumpListItemForegroundConverter x:Key="ForegroundConverter"/>
+        <!-- LOCALIZATION NOTE:
+            To localize the displayed strings copy their values to appropriately named
+            keys in the app's neutral language resource file (AppResources.resx) then
+            replace the hard-coded text value between the attributes' quotation marks
+            with the binding clause whose path points to that string name.
 
-        <Style x:Key="JumpListStyle" TargetType="phone:LongListSelector">
-            <Setter Property="LayoutMode" Value="List" />
-            <Setter Property="Margin" Value="12,12,0,0"/>
-            <Setter Property="ItemTemplate">
-                <Setter.Value>
+            For example:
+
+                Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"
+
+            This binding points to the template's string resource named "ApplicationTitle".
+
+            Adding supported languages in the Project Properties tab will create a
+            new resx file per language that can carry the translated values of your
+            UI strings. The binding in these examples will cause the value of the
+            attributes to be drawn from the .resx file that matches the
+            CurrentUICulture of the app at run time.
+         -->
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Photobox" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
+            <!--<TextBlock Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>-->
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1">
+            <ListBox x:Name="listImage">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <toolkit:WrapPanel>
+                            <toolkit:WrapPanel.ItemHeight>240</toolkit:WrapPanel.ItemHeight>
+                            <toolkit:WrapPanel.ItemWidth>240</toolkit:WrapPanel.ItemWidth>
+                        </toolkit:WrapPanel>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Border Background="{Binding Converter={StaticResource BackgroundConverter}}" 
-                                Width="470" 
-                                Height="70" 
-                                Margin="6">
-                            <TextBlock Text="{Binding Key}"
-                                       Foreground="{Binding Converter={StaticResource ForegroundConverter}}"                                       
-                                       FontFamily="{StaticResource PhoneFontFamilySemiBold}"
-                                       FontSize="28"  
-                                       Padding="2"
-                                       VerticalAlignment="Bottom"/>
+                        <Border Tap="OnTapImage">
+                            <Border.BorderThickness>2</Border.BorderThickness>
+                            <StackPanel>
+                                <Image Source="{Binding}">
+                                    <Image.Width>235</Image.Width>
+                                    <Image.Height>235</Image.Height>
+                                    <Image.Stretch>UniformToFill</Image.Stretch>
+                                </Image>
+                            </StackPanel>
                         </Border>
                     </DataTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
 
-        <DataTemplate x:Key="GroupHeader">
-            <Border Background="Transparent">
-                <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="1"	
-                        Width="400" Height="90" 				 
-                        HorizontalAlignment="Left">
-                    <TextBlock Text="{Binding Key}" 
-                               Foreground="{StaticResource PhoneAccentBrush}" 
-                               FontSize="28"
-                               Padding="2"                                
-                               FontFamily="{StaticResource PhoneFontFamilySemiLight}"
-                               HorizontalAlignment="Left"
-                               VerticalAlignment="Center"/>
-                </Border>
-            </Border>
-        </DataTemplate>
+        <!--Uncomment to see an alignment grid to help ensure your controls are
+            aligned on common boundaries.  The image has a top margin of -32px to
+            account for the System Tray. Set this to 0 (or remove the margin altogether)
+            if the System Tray is hidden.
 
-        <DataTemplate x:Key="ItemTemplate">
-            <StackPanel Height="108" Width="108" Margin="6,6">
-                <Image Width="108" Height="108" Stretch="UniformToFill">
-                    <Image.Source>
-                        <BitmapImage UriSource="{Binding ImageSource}" CreateOptions="BackgroundCreation"/>
-                    </Image.Source>
-                </Image>
-            </StackPanel>
-        </DataTemplate>
-
-    </phone:PhoneApplicationPage.Resources>
-
-    <Grid x:Name="LayoutRoot" Background="Transparent"
-           d:DataContext="{d:DesignInstance Type=ViewModels:PhotosViewModel, IsDesignTimeCreatable=true}">
-
-        <phone:Pivot Title="PHOTOS" Name="pivot" Margin="-3, 0, 0, 0" >
-
-            <phone:PivotItem Header="date">
-                <phone:LongListSelector Name="PhotoHubLLS" Margin="13,-30,0,0"
-                                        ItemsSource="{Binding GroupedPhotos}"
-                                        ItemTemplate="{StaticResource ItemTemplate}"                     
-                                        GroupHeaderTemplate="{StaticResource GroupHeader}"
-                                        JumpListStyle="{StaticResource JumpListStyle}" 
-                                        IsGroupingEnabled="True"
-                                        LayoutMode="Grid" 
-                                        GridCellSize="108,108"/>
-            </phone:PivotItem>
-
-            <phone:PivotItem Header="albums"/>
-        </phone:Pivot>
+            Before shipping remove this XAML and the image itself.-->
+        <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
     </Grid>
 
 </phone:PhoneApplicationPage>
