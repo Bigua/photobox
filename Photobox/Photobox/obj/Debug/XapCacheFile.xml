@@ -1,0 +1,20 @@
+﻿<xapCache source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Bin\Debug\Photobox_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="22-Jun-14 10:59:36 PM">
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\obj\Debug\Photobox.dll" archivePath="Photobox.dll" lastWriteTime="22-Jun-14 10:59:36 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="20-Jun-14 7:25:43 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="20-Jun-14 7:25:43 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="20-Jun-14 7:25:43 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="20-Jun-14 7:25:43 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="20-Jun-14 7:25:43 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\README_FIRST.txt" archivePath="README_FIRST.txt" lastWriteTime="20-Jun-14 7:35:55 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Toolkit.Content\ApplicationBar.Share.png" archivePath="Toolkit.Content\ApplicationBar.Share.png" lastWriteTime="22-Jun-14 10:56:36 AM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Toolkit.Content\ApplicationBar.Add.png" archivePath="Toolkit.Content\ApplicationBar.Add.png" lastWriteTime="20-Jun-14 7:35:55 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="20-Jun-14 7:35:55 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="20-Jun-14 7:35:55 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="20-Jun-14 7:35:55 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="20-Jun-14 7:35:55 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="22-Jun-14 12:17:23 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="20-Jun-14 7:25:43 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="20-Jun-14 7:25:43 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="20-Jun-14 7:35:55 PM" />
+  <file source="C:\Users\Rosemberg Rodrigues\Source\Repos\photobox\Photobox\Photobox\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="22-Jun-14 12:17:23 PM" />
+</xapCache>
